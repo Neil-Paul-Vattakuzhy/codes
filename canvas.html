@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="300px" height="300px" style="background-color: blue;">
+
+    </canvas>
+
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx= canvas.getContext('2d');
+        
+        //rectangle
+        ctx.moveTo(50,150);
+        ctx.fillStyle='red';
+        ctx.fillRect(50,150,50,100);
+        ctx.stroke()
+
+
+        //circle
+        ctx.beginPath()
+        //arc(x,y,)
+        ctx.arc(100,75,50,0,2*Math.PI)
+        ctx.stroke()
+
+        ctx.moveTo(150,150);
+        ctx.lineTo(200,200)
+        ctx.lineTo(175,250)
+        ctx.lineTo(125,250)
+        ctx.lineTo(100,200)
+        ctx.lineTo(150,150)
+        ctx.fill()
+
+    </script>
+</body>
+</html>
